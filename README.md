@@ -4,12 +4,9 @@
 
     docker build -t lts-alpine .
 
-2-Crear Contenedor
+2-Crear Contenedor en powerShell or Linux.
 
-#docker run --rm -d -v c:/docker/node/LTS/AngularTest/src:/usr/src/app --name #AngularTest -i lts-alpine
-
-    docker run --rm -d -v c:/docker/node/LTS/AngularTest/src:/usr/AngularTest/src --name AngularTest -i lts-alpine
-
+    docker run --rm -d -v ${PWD}/src:/usr/AngularTest/src --name AngularTest -i lts-alpine
 
 3 - Filtros Sobre Procesos Docker 
 
