@@ -1,4 +1,4 @@
-#Inicializar proyecto 
+# Inicializar proyecto 
 
 1-Crear imagen 
 
@@ -6,7 +6,10 @@
 
 2-Crear Contenedor en powerShell or Linux.
 
-    docker run --rm -d -v ${PWD}/src:/usr/AngularTest/src --name AngularTest -i lts-alpine
+    docker run --rm -d -v ${PWD}/src:/usr/AngularTest/src -p 80:3000 --name AngularTest -i lts-alpine
+
+  
+    Nota: Debido a Firewall de windows expongo mi localhost:80
 
 3 - Filtros Sobre Procesos Docker 
 
@@ -17,7 +20,8 @@
 
     docker exec -it -t AngularTest /bin/sh
 
-5- Detener  contenedor
+
+6- Detener  contenedor
 
     docker stop AngularTest
 
